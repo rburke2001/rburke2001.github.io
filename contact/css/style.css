@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(53, 42, 57);
+    font-family: 'Silkscreen';
+}
+ 
+/*nav li {
+    display: inline-block;
+    border: 1px solid red;
+}*/
+
+.hamburger, .close {
+    font-size: 2rem;
+    font-family: 'Silkscreen';
+    color: #5C5470
+}
+
+nav {
+    background-color: #2A2438;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*positioning the close button and nav bar*/
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /*animate slide up and down*/
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+nav:target {
+    transform: translateY(0);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.3rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center; 
+    width:100%;
+    font-family: 'Silkscreen';
+}
+/*
+nav li:first-child {
+    margin-right: auto;
+    font-size: 1.3rem;
+    padding: .5rem 1rem 0 1rem;
+    color: #2A2438;
+}*/
+
+nav a {
+    color: #5C5470;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 0.0rem 1rem;
+}
+
+nav a:focus {
+    background-color: #898AA6;
+    color: #352F44;
+}
+
+nav a:hover {
+    color: #dbd8e3;
+    background-color: #ccc4e3;
+}
+
+.active {
+    color: #7e5fdb;
+}
+
+.close:hover {
+    background-color: transparent;
+}
+
+@media (min-width:750px) {
+    header {
+        margin: 1rem auto;
+    }
+    nav {
+        border-top: 3px solid #5C5470;
+        border-bottom: 3px solid #5C5470;
+        padding: 0;
+        position: static;
+        height: auto;
+        transform: translateY(0);
+    }
+    .hamburger, .close {
+        display: none;
+    }
+    nav ul {
+        flex-flow: row wrap;
+        justify-content: flex-end; 
+    }
+}
+
+img {
+    border: 1px solid red;
+    width: 6rem;
+    height: 6rem;
+}
+
+h1 {
+    color: #5C5470;
+    font-family: 'Silkscreen';
+    font-size: 1rem;
+}
+
+.logo {
+    max-height: 5px;
+    max-width: 5px;
+    width: 5px;
+    height: 5px;
+    justify-content: left;
+} 

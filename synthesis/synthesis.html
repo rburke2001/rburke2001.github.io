@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Computer Synthesis in Music Final Project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Music&family=Silkscreen&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/> 
+        <link rel="icon" type="image/x-icon" href="kirby.png">
+        <script src="https://kit.fontawesome.com/fa1db1a0eb.js" crossorigin="anonymous"></script>
+    </head>
+        <header>
+        <a class="hamburger" href="#navbar" aria-label="Open main menu.">
+            <span class="sr-only">Open main menu</span>
+    <i class="fa-sharp fa-solid fa-bars" aria-hidden="true"></i>
+    </a>
+    <nav id="navbar">
+        <ul>
+        <li><a href="../index.html"><span>Home</span></a></li>
+        <li><a href="../about/about.html"></i><span>About</span></a></li>
+        <li><a href="../work/work.html"><span>Work</span></a></li>
+        <li><a href="synthesis.html"><span>Synthesis</span></a></li>
+        <li><a href="../contact/contact.html" ><span>Contact</span></a></li>
+        </ul>
+        <a class="close" href="#" aria-label="Close main menu.">
+            <span class="sr-only">Close main menu</span>
+    <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true"></i>
+    </a>
+    </nav>
+        </header>
+
+    <body>
+        <h1>Synthesizer</h1>
+    
+        <div id="filterOptions">
+                
+            <div>
+                <select id="filterList">
+                    <option value="selectFilter">Select a Filter</option>
+                    <option value="lowpass">Lowpass</option>
+                    <option value="highpass">Highpass</option>
+                    <option value="bandpass">Bandpass</option>
+                    <option value="notch">Notch</option>
+                </select>
+    
+                <button id="filterBtn">Activate Filter!</button>
+            </div>
+    
+            <div>
+                <label for="cutoff">Cutoff Frequency: <span id="freqValue"></span>Hz</label>    
+    
+                    <br> 
+    
+                <input type="range" name="cutoff" id="cutoffFreq" min="20" max="20000" value="750">
+            </div>
+    
+            <div>
+                <label for="quality">Q Value: <span id="qualValue"></span></label>
+    
+                    <br> 
+                    
+                <input type="range" id="qValue" name="quality" min=".001" max="50" value="1">
+            </div>
+            </div>
+    
+            <div id="adsrDiv">
+                <h2>Envelope Generator</h2>
+    
+                <div id="adsrLabels">
+                    <label for="attack">Attack Time: <span id="attackVal"></span> secs.</label>
+    
+                    <br>
+    
+                    <label for="decay">Decay Time: <span id="decayVal"></span> secs.</label>
+    
+                    <br>        
+    
+                    <label for="sustain">Sustain Level: <span id="sustainVal"></span>%</label>
+    
+                    <br>
+    
+                    <label for="release">Release Time: <span id="releaseVal"></span> secs.</label>
+                </div>
+    
+                <div id="adsrSliders">
+    
+                    <input type="range" id="attackTime" min=".1" max="10" value="1" step=".1" name="attack">
+        
+                <br>
+        
+                    <input type="range" id="decayTime" min=".1" max="10" value="1" step=".1" name="decay">
+        
+                <br>
+        
+                    <input type="range" id="sustainLevel" min=".1" max="1" value="1" step=".1" name="sustain">
+        
+                <br>
+        
+                    <input type="range" id="releaseTime" min=".1" max="10" value="1" step=".1" name="release">
+                 </div>
+                <br>
+                <br> 
+    
+                <div id="synthType">
+                    <h2>Synthesis Type Selection</h2>
+                    <select id="synthTypeList">
+                        <option value="selectSynthType">Select a Synthesis Type</option>
+                        <option value="additive">Additive</option>
+                        <option value="filtered">Filtered</option>
+                        <option value="ringMod">Ring Modulation</option>
+                        <option value="freqMod">Frequency Modulation</option>
+                    </select>
+                </div>
+
+                <div id="reverb">
+                    <h2>Reverb</h2>
+                    <button id="dry">
+                        Dry
+                      </button>
+                      <button id="wet">
+                        Wet
+                      </button>
+                      <button id="combined">
+                        Combined
+                      </button>
+                </div>
+
+    
+                <div id="keyboardDiv">
+    
+                <div class="key whiteKey" id="key0"><p>C</p></div>
+                <div class="key blackKey" id="key1"><p>C♯/D♭</p></div>
+                <div class="key whiteKey" id="key2"><p>D</p></div>
+                <div class="key blackKey" id="key3"><p>D♯/E♭</p></div>
+                <div class="key whiteKey" id="key4"><p>E</p></div>
+                <div class="key whiteKey" id="key5"><p>F</p></div>
+                <div class="key blackKey" id="key6"><p>F♯/G♭</p></div>
+                <div class="key whiteKey" id="key7"><p>G</p></div>
+                <div class="key blackKey" id="key8"><p>G♯/A♭</p></div>
+                <div class="key whiteKey" id="key9"><p>A</p></div>
+                <div class="key blackKey" id="key10"><p>A♯/B♭</p></div>
+                <div class="key whiteKey" id="key11"><p>B</p></div>
+                <div class="key whiteKey" id="key12"><p>C</p></div>
+                <div class="key blackKey" id="key13"><p>C♯/D♭</p></div>
+                <div class="key whiteKey" id="key14"><p>D</p></div>
+                <div class="key blackKey" id="key15"><p>D♯/E♭</p></div>
+                <div class="key whiteKey" id="key16"><p>E</p></div>
+            </div>
+    </body>
+    
+    <!--<script src="js/date.js"></script>-->
+    <script src="js/Oscil.js"></script>
+    <script src="js/script.js"></script>
+</html>
+    
